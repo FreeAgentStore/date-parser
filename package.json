@@ -1,0 +1,30 @@
+{
+  "name": "@freeagentstore/date-parser",
+  "version": "1.0.0",
+  "description": "Parse any date or time string — 'next tuesday', 'March 14, 2025', 'in 3 days', '2025-03-14T10:00Z'. Evolved from 500+ real-world formats.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["freeagentstore", "ai", "browser", "heuristic"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreeAgentStore/date-parser.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  }
+}
